@@ -71,4 +71,4 @@ def starting_fret(key, pos):
 
 	return ans
 
-print_scale('B', 1)
+print_scale('B', 3)
