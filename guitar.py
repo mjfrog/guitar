@@ -106,7 +106,7 @@ def print_scale_verbose(key, pos):
 
 def starting_fret(key, pos):
 	#calculate the starting fret based on the key and position
-	cutoff_fret = 16 #when a scale would start on this fret, instead wrap back around to the bottom of the fret board
+	cutoff_fret = 15 #when a scale would start on this fret, instead wrap back around to the bottom of the fret board
 	frets = ['E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B', 'C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#']
 	start = [0,3,5,7,10]
 	ans = frets.index(key) + start[pos-1]
@@ -123,6 +123,12 @@ def print_all_scales(key):
 	print ('m = minor root, M = major root')
 	for i in range(1,6):
 		print_scale(key,i)
+
+def random_key():
+	return random.choice(keys)
+
+def random_pos(key):
+	return random.randint(1,5)
 
 
 
